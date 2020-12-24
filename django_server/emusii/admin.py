@@ -2,9 +2,8 @@ from django.contrib import admin
 from .models import emusii
 
 
-class emusiiAdmin(admin.ModelAdmin):  # add this
-    title = "title"  # add this
-
+class emusiiAdmin(admin.ModelAdmin):
+    list_display= ("title", "emoji")
 
 # Register your models here.
-admin.site.register(emusii, emusiiAdmin)  # add this
+admin.site.register(emusii, emusiiAdmin)
