@@ -19,3 +19,6 @@ class graph(models.Model):
     nodes = models.ManyToManyField(emusii, related_name="nodes")
     nav_options = models.ManyToManyField(emoji)
 
+    def _str_(self):
+        return self.active
+
