@@ -3,10 +3,11 @@ from django.db import models
 class emoji(models.Model):
     title = models.CharField(max_length=50)
     word = models.CharField(max_length=50)
+        def _str_(self):
+            return self.title
 
 class emusii(models.Model):
     title = models.CharField(max_length=120)
-    # emoji = models.CharField(max_length=120)
     emoji = models.ForeignKey(emoji, on_delete=models.CASCADE)
 
     def _str_(self):
