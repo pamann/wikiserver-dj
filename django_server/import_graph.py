@@ -12,7 +12,12 @@ from emusii.models import emoji, emusii, graph
 with open('./grid.json') as f:
     data = json.load(f)
 
-    print(data)
+    for song in data:
+        key = song
+        emoji = data[song]['emoji']
+        channel = data[song]['channel']
+        title = data[song]['title']
+        neighbors = [data[song][key] for key in ['N', 'S', 'E', 'W']]
 
 
     
