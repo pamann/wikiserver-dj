@@ -5,10 +5,14 @@ from extract import json_extract
 with open("./grid.json") as f:
     data = json.load(f)
 
+# ------ add all emojis into DB ------
+
 # emojis = json_extract(data, 'emoji')
 # for _emoji in emojis:
 #     em, created = emoji.objects.get_or_create(title=_emoji)
 #     em.save()
+
+# ------ add all nodes w/o nav_options into DB ------
 
 # for node_id in data:
 #     song_id = node_id
@@ -20,6 +24,8 @@ with open("./grid.json") as f:
 
 #     _node, created = node.objects.get_or_create(song_id=song_id, title=title, _emoji=_emoji, channel=channel)
 #     _node.save()
+
+# ------ add nav_options to existing nodes ------
 
 for song_id in data:
     _node = node.objects.get(song_id=song_id)
