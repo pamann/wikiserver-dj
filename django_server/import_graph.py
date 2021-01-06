@@ -1,8 +1,11 @@
 """
-Terminal Commands:
-python manage.py shell
+HOW TO RUN THIS:
+python3 manage.py shell
 exec(open('import_graph.py').read())
 """
+
+# COMMENT THIS UP
+# write the SPC stuff
 
 import json
 import os
