@@ -9,4 +9,3 @@ admin.site.register(node)
 admin.site.register(activesubgraph)
 admin.site.register(graph)
 admin.site.register(emoji)
-

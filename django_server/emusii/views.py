@@ -20,3 +20,4 @@ class emojiView(viewsets.ModelViewSet):
 class activesubgraphView(viewsets.ModelViewSet):
     queryset = activesubgraph.objects.all()
     serializer_class = activesubgraphSerializer
+
