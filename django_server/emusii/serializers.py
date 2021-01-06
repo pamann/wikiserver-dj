@@ -4,10 +4,10 @@ from .models import node, emoji
 class emojiSerializer(serializers.ModelSerializer):
     class Meta:
         model = emoji
-        fields = ("id", "emoji")
+        fields = ("id", "title")
 
 class nodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = node
-        fields = ("id", "song", "title", "emoji", "channel", "nav_options")
+        fields = ("id", "song_id", "title", "_emoji", "channel", "nav_options")
         
