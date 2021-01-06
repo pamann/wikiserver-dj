@@ -6,7 +6,7 @@ exec(open('import_graph.py').read())
 
 import json
 import os
-# from emusii.models import emoji, emusii, graph # this causes an issue...
+from emusii.models import emoji, node, activesubgraph, graph
 
 
 with open('./grid.json') as f:
@@ -17,5 +17,4 @@ with open('./grid.json') as f:
         emoji = data[song]['emoji']
         channel = data[song]['channel']
         title = data[song]['title']
-        neighbors = [data[song][key] for key in ['N', 'S', 'E', 'W']]
-        print(neighbors)
+        nav_options = [data[song][key] for key in ['N', 'S', 'E', 'W']]

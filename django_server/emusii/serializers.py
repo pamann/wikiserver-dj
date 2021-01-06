@@ -15,7 +15,7 @@ class graphSerializer(serializers.ModelSerializer):
 class emojiSerializer(serializers.ModelSerializer):
     class Meta:
         model = emoji
-        fields = ("title", "word")
+        fields = ("emoji")
 
 class nodeSerializer(serializers.ModelSerializer):
     class Meta:
