@@ -15,15 +15,3 @@ class node(models.Model):
 
     def _str_(self):
         return self.title
-
-class activesubgraph(models.Model):
-    active = models.ForeignKey(node, on_delete=models.CASCADE, related_name="active")
-    nodes = models.ManyToManyField(node)
-
-    def _str_(self):
-        return self.active
-
-class graph(models.Model):
-    graph = models.ForeignKey(node, on_delete=models.CASCADE)
-    def _str_(self):
-        return self.graph

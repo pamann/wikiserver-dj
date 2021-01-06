@@ -4,8 +4,6 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'node', views.nodeView)
-router.register(r'graph', views.graphView)
-router.register(r'activesubgraph', views.activesubgraphView)
 router.register(r'emoji', views.emojiView)
 
 urlpatterns = [

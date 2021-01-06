@@ -1,16 +1,5 @@
 from rest_framework import serializers
-from .models import node, activesubgraph, emoji, graph
-
-
-class activesubgraphSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = activesubgraph
-        fields = ("id", "active", "nodes")
-        
-class graphSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = graph
-        fields = ("id", "graph")
+from .models import node, emoji
 
 class emojiSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,3 +10,4 @@ class nodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = node
         fields = ("id", "song", "title", "emoji", "channel", "nav_options")
+        
