@@ -9,5 +9,5 @@ class emojiSerializer(serializers.ModelSerializer):
 class nodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = node
-        fields = ("song_id", "title", "_emoji", "channel", "nav_options")
+        fields = ("song_id", "title", "_emoji", "channel", "curator", "N", "S", "E", "W", "N_em", "S_em", "E_em", "W_em")
         
