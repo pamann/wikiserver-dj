@@ -24,3 +24,9 @@ class node(models.Model):
 
     def _str_(self):
         return self.title
+
+class userSubmission(models.Model):
+    youtube_link = models.URLField(max_length=70)
+    youtube_emojis = models.CharField(max_length=120)
+    user_name = models.CharField(max_length=120)
+    user_emojis = models.CharField(max_length=120)

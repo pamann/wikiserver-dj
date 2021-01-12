@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
-from .serializers import nodeSerializer, emojiSerializer
-from .models import node, emoji
+from .serializers import nodeSerializer, emojiSerializer, userSubmissionSerializer
+from .models import node, emoji, userSubmission
 
 class nodeView(viewsets.ModelViewSet):
     queryset = node.objects.all()
@@ -16,3 +16,7 @@ class emojiView(viewsets.ModelViewSet):
     serializer_class = emojiSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields =['title']
+
+class userSubmissionView(viewsets.ModelViewSet):
+    queryset = userSubmission.objects.all()
+    serializer_class = userSubmissionSerializer
