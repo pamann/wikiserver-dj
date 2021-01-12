@@ -16,6 +16,6 @@ class userSubmissionSerializer(serializers.ModelSerializer):
         model = userSubmission
         fields = ("id", "youtube_link", "youtube_emojis", "user_name", "user_emojis")
 
-    def create(self, validated_data):
-        new_sub = userSubmission.objects.create(**validated_data)
-        return new_sub
+    # def create(self, validated_data):
+    #     new_sub = userSubmission.objects.create(**validated_data)
+    #     return new_sub
